@@ -1,0 +1,5 @@
+# Tarea 3 - Creacion de CRUD con base de datos
+ ARCHIVO .env
+
+PORT=3000
+DB_MONGO="mongodb+srv://anarosaura:iP5H8WMLx6FASh8d@cluster0.ijnrxas.mongodb.net/tarea3?retryWrites=true&w=majority"
