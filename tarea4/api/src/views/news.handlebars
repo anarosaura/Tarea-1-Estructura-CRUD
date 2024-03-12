@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Noticias</title>
+</head>
+<body>
+    <h1>Buscar Noticias</h1>
+    <form action="/news" method="GET">
+        <input type="text" name="q" placeholder="Buscar noticias...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {{#if news}}
+        <div>
+            {{#each news}}
+                <div>
+                    <h2><a href="{{this.url}}" target="_blank">{{this.title}}</a></h2>
+                    <img src="{{this.urlToImage}}" alt="{{this.title}}" style="width:100px;">
+                    <p>{{this.description}}</p>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <p>Ingresa una búsqueda para ver resultados.</p>
+    {{/if}}
+</body>
+</html>
